@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("BG32.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ─── HEADER ─────────────────────────────────────────── */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+header nav a:hover { color: #e50914; }
+
+/* ─── BUTTONS ────────────────────────────────────────── */
+.btn {
+  padding: 8px 18px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 3px;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-red  { background: #e50914; color: white; }
+.btn-blue { background: #0d6efd; color: white; }
+
+/* ─── HERO ────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(to right, #8b0000, #e50914);
+  color: white;
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* ─── INTRO BAND (logo + text side by side) ──────────── */
+.intro-band {
+  background: rgba(80, 80, 80, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: white;
+  width: 100%;
+  padding: 40px 60px;
+}
+
+.intro-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.intro-inner img {
+  flex-shrink: 0;
+  width: 180px;
+  height: auto;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text p {
+  margin: 0 0 14px;
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.intro-text p:last-child { margin-bottom: 0; }
+
+/* ─── CONTACT SECTION ─────────────────────────────────── */
+.contact-section {
+  width: 100%;
+  background: rgba(80, 80, 80, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0 60px 50px;
+}
+
+.boxes {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* LEFT */
+.left {
+  width: 50%;
+  padding: 30px;
+  border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+/* RIGHT */
+.right {
+  width: 50%;
+  padding: 30px;
+}
+
+/* MAP */
+.map iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 3px;
+}
+
+.contact-info {
+  margin-top: 15px;
+}
+
+.contact-info h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  color: #1a1a1a;
+}
+
+.contact-info p { margin: 4px 0; font-size: 0.9rem; }
+.contact-info .email { color: #c0392b; font-weight: 600; }
+
+/* FORM */
+.right h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  margin: 0 0 16px;
+  color: #1a1a1a;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 10px 0 4px;
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+}
+
+form input, form select {
+  padding: 9px 12px;
+  margin: 0 0 4px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.88rem;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  transition: border-color 0.2s;
+}
+
+form input:focus, form select:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row input { flex: 1; }
+
+button[type="submit"] {
+  margin-top: 14px;
+  padding: 11px;
+  background: #e50914;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background: #b3000f;
+  transform: translateY(-1px);
+}
+
+/* ─── VISION & MISSION ────────────────────────────────── */
+.vm-section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.vm-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: white;
+  margin: 0 0 30px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.vm-box {
+  display: flex;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.vm {
+  flex: 1;
+  padding: 40px 50px;
+  color: white;
+  text-align: left;
+}
+
+.vm h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.vm p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  margin: 0 0 14px;
+}
+
+.vision  { background: rgb(170, 0, 0); }
+.mission { background: #0b2c5a; }
+
+/* ─── FOOTER ──────────────────────────────────────────── */
+.footer-banner {
+  background: linear-gradient(to right, #555, #2e2e2e);
+  color: white;
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.footer-banner h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  margin: 0 0 14px;
+}
+
+.footer-banner p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.88;
+}
+
+/* ─── SLIDE-IN ANIMATIONS ─────────────────────────────── */
+.slide-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.slide-in.slide-left {
+  transform: translateX(-50px);
+}
+
+.slide-in.slide-right {
+  transform: translateX(50px);
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.slide-in-delay-1 { transition-delay: 0.1s; }
+.slide-in-delay-2 { transition-delay: 0.22s; }
+.slide-in-delay-3 { transition-delay: 0.36s; }

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICELL Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <h2 style="margin:0;">
+    <img src="StatesLmao.avif" height="60" alt="MCM Logo">
+  </h2>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Admissions</a>
+    <a href="#">Programs</a>
+    <a href="#">Student Life</a>
+  </nav>
+  <div>
+    <button class="btn btn-red">Ask Us</button>
+    <button class="btn btn-blue">Apply Now</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero slide-in">
+  <h1>Institute for Credentialing Excellence and Lifelong Learning</h1>
+</section>
+
+<!-- INTRO BAND: logo + description text side by side, full-width grey -->
+<div class="intro-band">
+  <div class="intro-inner">
+
+    <!-- LOGO -->
+    <img
+      src="mapua.png"
+      alt="Mapúa Malayan College of Davao Logo"
+      class="slide-in slide-left"
+    >
+
+    <!-- TEXT -->
+    <div class="intro-text slide-in slide-right slide-in-delay-1">
+      <p>
+        The Institute for Credentialing Excellence and Lifelong Learning (iCELL) is committed to
+        promoting knowledge in the areas of Engineering, Business, Sciences, Information Technology,
+        Arts and Languages, and other important disciplines by establishing linkages to industry
+        partners and accrediting agencies.
+      </p>
+      <p>
+        iCELL offers value-augmenting opportunities for professionals and students. The institute aims
+        to develop the competencies of professional workers through the provision of short courses,
+        training and seminars, and other learning and enrichment opportunities. iCELL also aspires to
+        provide essential knowledge and skills for the successful alignment of their competencies with
+        the industry workforce demand.
+      </p>
+      <p>
+        The institute, in line with the corporate mission of Mapúa Malayan Colleges Mindanao, A Mapúa
+        School, upholds excellent and relevant education to make its members globally competitive and
+        locally in demand.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTACT SECTION — continues the grey band -->
+<div class="contact-section">
+  <div class="boxes slide-in">
+
+    <!-- LEFT: MAP + CONTACT INFO -->
+    <div class="left slide-in slide-left slide-in-delay-1">
+      <div class="map">
+        <iframe
+          src="https://maps.google.com/maps?q=Davao%20City&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          title="Davao City Map">
+        </iframe>
+      </div>
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Gen. Douglas MacArthur Hwy, Talomo, Davao City, 8000 Davao del Sur, Philippines.</p>
+        <p class="email">admissions@mcm.edu.ph</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: CONTACT FORM -->
+    <div class="right slide-in slide-right slide-in-delay-2">
+      <h2>Contact Us</h2>
+      <form>
+        <label>Name *</label>
+        <div class="row">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Middle Name">
+          <input type="text" placeholder="Last Name">
+        </div>
+
+        <label>Name Extensions</label>
+        <select>
+          <option>II</option>
+          <option>III</option>
+          <option>IV</option>
+          <option>Jr.</option>
+          <option>Sr.</option>
+          <option>None</option>
+        </select>
+
+        <label>Year Level</label>
+        <select>
+          <option>Junior</option>
+          <option>Senior</option>
+          <option>College</option>
+          <option>Transferee</option>
+        </select>
+
+        <label>Email *</label>
+        <input type="email" placeholder="example@example.com">
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- VISION & MISSION -->
+<div class="vm-section">
+  <h2 class="slide-in">Our Vision &amp; Mission</h2>
+
+  <div class="vm-box">
+    <div class="vm vision slide-in slide-left slide-in-delay-1">
+      <h3>Vision</h3>
+      <p>
+        Be a prime institution that fosters excellent Lifelong Learning and professional
+        development through innovative learning methodologies to significantly contribute
+        to the development of the society.
+      </p>
+    </div>
+
+    <div class="vm mission slide-in slide-right slide-in-delay-2">
+      <h3>Mission</h3>
+      <p>
+        The Institute of Credentialing Excellence and Lifelong Learning (ICELL) is committed
+        to promote knowledge in the areas of Engineering, Business, Sciences, Information
+        Technology, Arts and Languages, Health Sciences, and other essential disciplines by
+        establishing linkages to industry partners and accrediting agencies.
+      </p>
+      <p>
+        ICELL offers value-augmenting opportunities for professionals and students. The institute
+        aims to develop the competencies of professional workers through the provision of short
+        courses, trainings and seminars, and other learning and enrichment opportunities. ICELL
+        also aspires to provide undergraduate students, primarily of Mapúa Malayan Colleges
+        Mindanao, the essential knowledge and skills for the successful alignment of their
+        competencies with the industry workforce demand.
+      </p>
+      <p>
+        The institute, in line with the corporate mission of Mapúa Malayan Colleges Mindanao,
+        upholds excellent and relevant education to make its members globally competitive and
+        locally in-demand.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-banner slide-in">
+  <h2>We Provide Upskilling and Certification for Business Clients</h2>
+  <p>
+    Let us work together to upskill the people in your organization. Make us your lifelong
+    learning partner. For training solutions, credentialing, and certification demands,
+    email us at <strong>icell@mcm.edu.ph</strong>.
+  </p>
+</div>
+
+<!-- SCROLL ANIMATION OBSERVER -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.slide-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
